@@ -1,0 +1,22 @@
+version: "3.5"
+services:
+  spring:
+    container_name: softlab-spring-todolist
+    build: .
+    image: dockerhub.softgen.ge/softlab/todolist
+    ports:
+      - 8085:8080
+    depends_on:
+      - db
+
+  db:
+    container_name: softlab-db
+    image: postgres:13.1-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - C:\Users\Mariami\softlab\postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: softlab_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
