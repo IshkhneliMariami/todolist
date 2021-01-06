@@ -44,7 +44,8 @@ public class TodoItemController {
     public TodoItem updateTodoItem(@PathVariable long id,
                                    @RequestBody TodoItem unsafeTodoItem) {
         TodoItem todoItem = todoItemService.get(id);
-        todoItem.setText(unsafeTodoItem.getText());
+        todoItem.setTitle(unsafeTodoItem.getTitle());
+        todoItem.setDescription(unsafeTodoItem.getDescription());
         todoItem.setStatus(unsafeTodoItem.getStatus());
         return todoItemService.update(todoItem);
     }

@@ -17,11 +17,14 @@ public class TodoItem {
     @Id
     private long id;
 
-    @Column(name = "text")
-    private String text;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "status")
-    private String status;
+    @Column(name = "description")
+    private String description;
+
+    @Column(name="status")
+    private String status ;
 
 
 }
