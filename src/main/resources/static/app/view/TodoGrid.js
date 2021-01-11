@@ -45,11 +45,11 @@ Ext.define('MI.view.TodoGrid', {
         menuDisabled: true,
         sortable: false,
         items: [{
-            iconCls: 'fa fa-trash-o',
+            iconCls: 'fa fa-trash',
             handler: 'delete',
             tooltip: 'წაშლა'
         },{
-            iconCls: 'x-fa fa-cog',
+            iconCls: 'fa fa-edit',
             handler:'editItem',
             tooltip: 'რედაქტირება',
         }]
