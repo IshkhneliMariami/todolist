@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("todolist")
+@RequestMapping("/todolist")
 @RequiredArgsConstructor
 
 public class TodoItemController {
@@ -46,7 +46,7 @@ public class TodoItemController {
         TodoItem todoItem = todoItemService.get(id);
         todoItem.setTitle(unsafeTodoItem.getTitle());
         todoItem.setDescription(unsafeTodoItem.getDescription());
-        todoItem.setStatus(unsafeTodoItem.getStatus());
+//        todoItem.setStatus(unsafeTodoItem.getStatus());
         return todoItemService.update(todoItem);
     }
 

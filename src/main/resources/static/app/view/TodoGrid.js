@@ -5,6 +5,9 @@ Ext.define('MI.view.TodoGrid', {
     controller: {
         xclass: 'MI.view.MainController'
     },
+    viewModel:{
+        xclass:'MI.view.MainViewModel'
+    },
     bind: '{todolist}',
     tbar: [{
         text: 'დამატება',
@@ -28,13 +31,15 @@ Ext.define('MI.view.TodoGrid', {
         dataIndex: 'description'
 
 
-    }, {
-        xtype: 'booleancolumn',
-        text: 'სტატუსი',
-        flex: 1,
-        trueText: '✓',
-        falseText: '',
-    }, {
+    },
+    //     {
+    //     xtype: 'booleancolumn',
+    //     text: 'სტატუსი',
+    //     flex: 1,
+    //     trueText: '✓',
+    //     falseText: '',
+    // },
+        {
         xtype: 'actioncolumn',
         width: 100,
         menuDisabled: true,

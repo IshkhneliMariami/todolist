@@ -11,6 +11,9 @@ Ext.define('MI.view.AddItemWindow', {
     controller:{
       xclass: 'MI.view.MainController'
     },
+    viewModel:{
+        xclass:'MI.view.MainViewModel'
+    },
 
     items: [{
         xtype: 'form',
@@ -21,7 +24,13 @@ Ext.define('MI.view.AddItemWindow', {
             allowBlank: false
         },
 
-        items: [{
+        items: [
+        //     {
+        //     xtype: 'numberfield',
+        //     name:'id',
+        //     fieldLabel: 'ID'
+        // },
+            {
             xtype: 'textfield',
             name: 'title',
             fieldLabel: 'Title'
@@ -33,7 +42,7 @@ Ext.define('MI.view.AddItemWindow', {
         }],
         buttons: [{
             text: 'შენახვა',
-            handler: 'savePost'
+            handler: 'saveItem'
         }],
 
     }]

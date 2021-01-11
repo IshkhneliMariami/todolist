@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "to_do_list")
+@Table(name = "todolist")
 public class TodoItem {
     @Id
     private long id;
@@ -22,9 +22,9 @@ public class TodoItem {
 
     @Column(name = "description")
     private String description;
-
-    @Column(name="status")
-    private String status ;
+//
+//    @Column(name="status")
+//    private String status ;
 
 
 }
