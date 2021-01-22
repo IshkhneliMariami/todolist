@@ -5,8 +5,8 @@ Ext.define('MI.view.TodoGrid', {
     controller: {
         xclass: 'MI.view.MainController'
     },
-    viewModel:{
-        xclass:'MI.view.MainViewModel'
+    viewModel: {
+        xclass: 'MI.view.MainViewModel'
     },
     bind: '{todolist}',
     tbar: [{
@@ -32,26 +32,27 @@ Ext.define('MI.view.TodoGrid', {
 
 
     },
-    //     {
-    //     xtype: 'booleancolumn',
-    //     text: 'სტატუსი',
-    //     flex: 1,
-    //     trueText: '✓',
-    //     falseText: '',
-    // },
+        //     {
+        //     xtype: 'booleancolumn',
+        //     text: 'სტატუსი',
+        //     flex: 1,
+        //     trueText: '✓',
+        //     falseText: '',
+        // },
         {
-        xtype: 'actioncolumn',
-        width: 100,
-        menuDisabled: true,
-        sortable: false,
-        items: [{
-            iconCls: 'fa fa-trash',
-            handler: 'delete',
-            tooltip: 'წაშლა'
-        },{
-            iconCls: 'fa fa-edit',
-            handler:'editItem',
-            tooltip: 'რედაქტირება',
+            xtype: 'actioncolumn',
+            width: 150,
+            menuDisabled: true,
+            sortable: false,
+            text: 'წაშლა/რედაქტირება',
+            items: [{
+                iconCls: 'fa fa-trash',
+                handler: 'deleteItem',
+                tooltip: 'წაშლა'
+            }, {
+                iconCls: 'fa fa-edit',
+                handler: 'editItem',
+                tooltip: 'რედაქტირება',
+            }]
         }]
-    }]
 });

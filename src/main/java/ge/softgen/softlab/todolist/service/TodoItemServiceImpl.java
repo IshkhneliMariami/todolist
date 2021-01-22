@@ -29,9 +29,9 @@ public class TodoItemServiceImpl implements TodoItemService {
     }
 
     @Override
-    public TodoItem add(TodoItem todoItem) {
-
-        return todoItemRepository.save(todoItem);
+    public TodoItem add(TodoItem todoitem) {
+        todoitem.setId(null);
+        return todoItemRepository.save(todoitem);
     }
 
     @Override

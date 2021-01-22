@@ -43,11 +43,11 @@ public class TodoItemController {
     @PutMapping("{id}")
     public TodoItem updateTodoItem(@PathVariable long id,
                                    @RequestBody TodoItem unsafeTodoItem) {
-        TodoItem todoItem = todoItemService.get(id);
-        todoItem.setTitle(unsafeTodoItem.getTitle());
-        todoItem.setDescription(unsafeTodoItem.getDescription());
-//        todoItem.setStatus(unsafeTodoItem.getStatus());
-        return todoItemService.update(todoItem);
+        TodoItem todoitem = todoItemService.get(id);
+        todoitem.setTitle(unsafeTodoItem.getTitle());
+        todoitem.setDescription(unsafeTodoItem.getDescription());
+//        todoitem.setStatus(unsafeTodoItem.getStatus());
+        return todoItemService.update(todoitem);
     }
 
 }
